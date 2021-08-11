@@ -1,5 +1,4 @@
 import express from "express";
-import pokemonRouter from "./routes/pokemonRouter";
 
 const app = express();
 const port = process.env.PORT || 5000;
