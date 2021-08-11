@@ -1,4 +1,5 @@
 import express from "express";
+
 import { createRequire } from "module";
 
 const app = express();
@@ -8,7 +9,7 @@ const require = createRequire(import.meta.url);
 const pokeData = require("./db/Pokemon.json");
 
 
-app.get("/", (req, res) => res.send(pokeData));
+app.get("/pokemon", (req, res) => res.send(pokeData));
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)

@@ -1,9 +1,20 @@
-import express from "express";
-import { getAll, getSingle } from "../controllers/pokeController.js";
+import { Router } from "express";
+//import express from 'express';
+import {
+  createSingle,
+  getAll,
+  getSingle,
+  updateSingle,
+  deleteSingle,
+} from "../controllers/pokeController.js";
 
-const pokeRouter = express.Router();
+const pokeRouter = Router();
+//const pokeRouter = express.Router();
 
-recipeRouter.get("/", getAll);
-recipeRouter.get("/:id", getSingle);
+pokeRouter.get("/", getAll);
+pokeRouter.get("/:id", getSingle);
+pokeRouter.post("/", createSingle);
+pokeRouter.put("/:id", updateSingle);
+pokeRouter.delete("/:id", deleteSingle);
 
-export default recipeRouter;
+export default pokeRouter;
